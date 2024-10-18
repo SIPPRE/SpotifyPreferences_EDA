@@ -1,7 +1,3 @@
-Here is a draft for the `README.md` file:
-
----
-
 # Spotify Insights Web Application
 
 This project is a web-based application developed as an undergraduate project at the Department of Electrical & Computer Engineering, University of Peloponnese for the course "Digital Sound and Image Processing." The project was performed by Kioulachoglou D. and Methenitis K., under the supervision of Associate Prof. Athanasios Koutras.
@@ -70,6 +66,3 @@ You will also need to set up a Spotify Developer account and configure the follo
 
 This project is intended for educational purposes and should not be used for commercial applications without proper licensing.
 
----
-
-Feel free to modify this draft to include more specific information or instructions as needed.
