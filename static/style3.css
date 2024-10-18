@@ -1,0 +1,125 @@
+body, html {
+    margin:  0;
+    padding-left:  10 px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgba(97, 190, 60, 1) 0%, rgba(97, 190, 60, 0) 100%);
+    overflow: auto;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+.chart-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.time-range-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.time-range-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.time-range-btn:hover {
+    background-color: #555;
+}
+
+.time-range-btn.active {
+    background-color: #666;
+}
+
+.artist-grid {
+    margin-bottom: 20px;
+}
+
+.artist-grid-inner {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    justify-items: start;
+    align-items: center;
+}
+
+.artist-item {
+    text-align: start;
+}
+
+.artist-image {
+    width: 100px; /* ή οποιοδήποτε επιθυμητό μέγεθος */
+    height: 100px; /* ή οποιοδήποτε επιθυμητό μέγεθος */
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.track-info {
+    font-weight: bold; /* Πιο έντονα γράμματα */
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination span {
+    margin: 0 10px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #555;
+}
+
+.back-link {
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+}

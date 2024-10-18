@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Genres</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Top Genres</h1>
+        
+        <!-- Time Range Selection Bar -->
+        <div class="time-range-bar">
+            <a href="{{ url_for('top_genres', time_range='short_term') }}" class="time-range-btn {% if time_range == 'short_term' %}active{% endif %}">This Month</a>
+            <a href="{{ url_for('top_genres', time_range='medium_term') }}" class="time-range-btn {% if time_range == 'medium_term' %}active{% endif %}">Last 6 Months</a>
+            <a href="{{ url_for('top_genres', time_range='long_term') }}" class="time-range-btn {% if time_range == 'long_term' %}active{% endif %}">Last Year</a>
+        </div>
+        
+        
+        <h2>Top Genres Pie</h2>
+        <img src="{{ url_for('static', filename='top_genres_pie.png') }}" alt="Top Artists Bar Pie">
+        
+        <div class="back-link">
+            <a href="{{ url_for('welcome') }}" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

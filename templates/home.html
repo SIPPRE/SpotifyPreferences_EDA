@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Spotify Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Spotify Analyzer</h1>
+            <p>Your Spotify Experience</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <section class="intro">
+                <h2>Discover your top music</h2>
+                <p>Uncover your top songs, artists and genres. Visualize your listening habits with detailed charts and graphs.</p>
+                <a href="{{url_for('login')}}" class="btn">Login with Spotify</a>  
+            </section>
+            <section class="features">
+                <div class="feature">
+                    <h3>Top Songs</h3>
+                    <p>Explore the songs you played on repeat.</p>
+                </div>
+                <div class="feature">
+                    <h3>Top Artists</h3>
+                    <p>Find out which artists dominated your playlists.</p>
+                </div>
+                <div class="feature">
+                    <h3>Top Genres</h3>
+                    <p>See the genres that defined your musical taste.</p>
+                </div>
+            </section>
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Spotify Wrapped</p>
+                </div>
+            </footer>
+            
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top Artists</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Top Artists</h1>
+        
+        <!-- Time Range Selection Bar -->
+        <div class="time-range-bar">
+            <a href="{{ url_for('top_artists', time_range='short_term') }}" class="time-range-btn {% if time_range == 'short_term' %}active{% endif %}">This Month</a>
+            <a href="{{ url_for('top_artists', time_range='medium_term') }}" class="time-range-btn {% if time_range == 'medium_term' %}active{% endif %}">Last 6 Months</a>
+            <a href="{{ url_for('top_artists', time_range='long_term') }}" class="time-range-btn {% if time_range == 'long_term' %}active{% endif %}">All Time</a>
+        </div>
+        
+        <h2>Top 10 Artists</h2>
+        <div class="artist-grid">
+            <div class="artist-grid-inner">
+                {% for artist in top_artists %}
+                    <div class="artist-item">
+                        <img src="{{ artist['images'][0]['url'] if artist['images'] else url_for('static', filename='default_artist.png') }}" alt="{{ artist['name'] }}" class="artist-image">
+                        <p>{{ artist['name'] }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <h2>Top Artists Chart</h2>
+        <div class="chart-container">
+            <img src="{{ url_for('static', filename='top_artists_medium.png') }}" alt="Top Artists Bar Chart">
+        </div>
+        
+        <div class="back-link">
+            <a href="{{ url_for('welcome') }}" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
